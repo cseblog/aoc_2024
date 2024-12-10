@@ -3,15 +3,15 @@ import fileinput
 
 def main():
     print("Hellow day 2")
+    count = 0
     for line in fileinput.input(files=('day2.txt'), encoding="utf-8"):
         inputs = line.split(" ")
         int_arr = [int(num) for num in inputs]
         in1 = int_arr.copy()
-        res = part2(int_arr)
         res2 = part22(in1)
-
-        if res != res2:
-            print(in1)
+        if res2:
+            count = count + 1
+    print(count)
 
 
 def part22(int_arr):
@@ -190,7 +190,7 @@ def valTrend(int_arr):
             is_asc = False
         if int_arr[i] != desc_arr[i]:
             is_desc = False
-    return is_asc and is_desc
+    return is_asc or is_desc
 
 
 def gap_test(inputs):
@@ -203,4 +203,6 @@ def gap_test(inputs):
 
 
 # executive the main
-# main()
+# Solution: Very straight forward solution for part 2:
+# Count all the case of part 1, then brute force remote one element of the array input and re-run part 1 again...
+main()
