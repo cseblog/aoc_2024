@@ -21,6 +21,7 @@ class Day4:
     @staticmethod
     def find_all_concatenations(keys):
         all_concatenations = []
+
         def backtrack(current, remaining):
             if not remaining:
                 all_concatenations.append(current)
@@ -62,14 +63,14 @@ class Day4:
     def get_left_diagonal(self):
         for i in range(len(self.data)):
             col = []
-            for j in range(i+1):
+            for j in range(i + 1):
                 col.append(self.data[j][i - j])
             self.left_diagonals.append("".join(col))
 
         for i in range(1, len(self.data)):
             r = i
             col = []
-            for j in range(len(self.data) - 1, i-1, -1):
+            for j in range(len(self.data) - 1, i - 1, -1):
                 col.append(self.data[r][j])
                 r = r + 1
             self.left_diagonals.append("".join(col))
@@ -105,8 +106,8 @@ class Day4:
         for i in range(0, len(self.data) - 2, 1):
             for x in range(0, len(self.data) - 2, 1):
                 mt = []
-                for j in range(i, i+3):
-                    for k in range(x, x+3):
+                for j in range(i, i + 3):
+                    for k in range(x, x + 3):
                         mt.append(self.data[j][k])
                 self.part2_data.append("".join(mt))
 
@@ -123,4 +124,3 @@ class Day4:
                     count = count + 1
 
         print(count)
-

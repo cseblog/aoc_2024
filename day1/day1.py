@@ -1,4 +1,5 @@
 import fileinput
+
 def main():
     print("Hellow day 1")
     a = []
@@ -17,7 +18,7 @@ def main():
     total = sum(dist)
     print(total)
 
-    #Part 2
+    # Part 2
     factor = []
     for i in range(len(a)):
         count = 0

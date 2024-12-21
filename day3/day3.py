@@ -1,8 +1,6 @@
 import fileinput
 import re
 
-
-
 def main():
     print("Hellow day 1")
     txt = open("day3.txt").read()
@@ -13,6 +11,7 @@ def main():
     t = t + start(txt)
     print(t)
 
+
 def start(txt):
     # start
     total = 0
@@ -22,7 +21,7 @@ def start(txt):
     pattern4 = r'do\(\).*$'
     pattern5 = r'^.*do\(\)'
     total = total + (part2(last, pattern4))
-    total = total + (part2(first,pattern5))
+    total = total + (part2(first, pattern5))
     return total
 
 
@@ -61,15 +60,14 @@ def process(x):
 
     return result
 
-#166357705
-#81008407
-#66317524
-#89135798
-#88811886
+# 166357705
+# 81008407
+# 66317524
+# 89135798
+# 88811886
 
 # Learnt lesson: The regrex is not applied to multiple lines
 # We need to remove \n characters before we want to grep a pattern crossing lines
 # Solution: One of the way to solve by remove all text 'don't()()...don't() and don't()...do()
 # Using the result txt and re-run part1
 # main()
-

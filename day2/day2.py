@@ -1,6 +1,5 @@
 import fileinput
 
-
 def main():
     print("Hellow day 2")
     count = 0
@@ -67,6 +66,7 @@ def part2(levels):
                 return True
     return False
 
+
 def is_safe(levels):
     differs = [a - b for a, b in zip(levels, levels[1:])]
     is_monotonic = all(i > 0 for i in differs) or all(i < 0 for i in differs)
@@ -112,29 +112,29 @@ def inc_val_trend2(orginArry):
             return False
 
 
-def desc_val_trend2(orginArry):
+def desc_val_trend2(orgin_array):
     is_desc = True
     desc_count = 0
     last_desc_index = -1
-    prev = orginArry[0]
-    for i in range(1, len(orginArry)):
-        if orginArry[i] > prev:
+    prev = orgin_array[0]
+    for i in range(1, len(orgin_array)):
+        if orgin_array[i] > prev:
             is_desc = False
             desc_count = desc_count + 1
             last_desc_index = i
-        prev = orginArry[i]
+        prev = orgin_array[i]
 
     if not is_desc:
         if desc_count > 1:
             return False
         if desc_count == 1:
-            arr1 = orginArry.copy()
+            arr1 = orgin_array.copy()
             del arr1[last_desc_index]
             test1 = gap_test(arr1)
             if test1:
                 return True
             else:
-                arr1 = orginArry.copy()
+                arr1 = orgin_array.copy()
                 del arr1[last_desc_index - 1]
                 test2 = gap_test(arr1)
                 if test2:
@@ -143,7 +143,7 @@ def desc_val_trend2(orginArry):
                     return False
 
     if is_desc:
-        res = gap_test2(orginArry)
+        res = gap_test2(orgin_array)
         if res:
             return True
         else:
