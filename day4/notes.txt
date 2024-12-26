@@ -1,0 +1,8 @@
+How to traverse an matrix in Python using for loop
+
+row ->
+col ->
+diagonal -> left and right
+
+
+How to traverse an matrix by a square?

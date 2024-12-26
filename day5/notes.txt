@@ -1,0 +1,11 @@
+Hashmap in Python
+
+// init hashmap
+hashmap = {}
+hashmap = {key: [10, 20, 30], key2: [12, 3, 4 , 4]}
+
+//get out an element
+hashmap.get(key)
+
+//update list in hashmap
+hashmap.get(key).append(new_value)

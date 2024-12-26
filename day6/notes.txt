@@ -1,0 +1,5 @@
+The map has loops
+If we count the loops, the count is too high?
+
+
+
