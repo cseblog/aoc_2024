@@ -1,5 +1,18 @@
 The map has loops
 If we count the loops, the count is too high?
 
+Not understanding the requirement fully. The guard could leave the map in any direction
+
+- Using set in python
+ _set = set([]) # init a empty set
+
+- add() / pop() an element to set
+
+
+Part 2:
+------
+The map have the infinite loop
+part 2 takes 54 minutes, with brute force
+Using hashmap to reduce the execution time of loop detective
 
 
